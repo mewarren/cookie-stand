@@ -10,7 +10,7 @@ var airport = {
     storeHours: ['6am : ','7am : ','8am : ','9am : ','10am : ','11am : ','12pm : ','1pm : ','2pm : ','3pm : ','4pm : ','5pm : ','6pm : ','7pm : ','8pm : ', 'Total : '],
     
     randomNumber: function() {
-      for(var i =0; i < 14; i++){
+      for(var i =0; i < 15; i++){
         var numberPeople = Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
         var numberCookies = Math.floor(this.aveCookSale * numberPeople);
         this.cookPerHour.push(numberCookies);
@@ -18,7 +18,7 @@ var airport = {
     },
 
     getTotal: function(){
-        for(var i =0; i < 14; i++){
+        for(var i =0; i < 15; i++){
             this.totalCookies += this.cookPerHour[i];
         }
     },
@@ -31,14 +31,18 @@ var airport = {
     }, 
     
     addToDom: function(){
-        //this.getTotal();
+        // this.getTotal();
         this.randomNumber();
         var element = document.getElementById('airport');
-        for( var i=0; i < 14; i++){
+        for( var i=0; i < 15; i++){
             var list = document.createElement('li');
             list.innerHTML = this.storeHours[i] + this.cookPerHour[i];
-            element.appendChild( list); 
+            element.appendChild(list); 
         }
+        this.getTotal();
+        var list = document.createElement('li');
+        list.innerHTML = this.storeHours[15] + this.totalCookies;
+        element.appendChild(list);
     }
 }
 airport.addToDom();
@@ -54,7 +58,7 @@ var pioneer = {
     storeHours: ['6am : ','7am : ','8am : ','9am : ','10am : ','11am : ','12pm : ','1pm : ','2pm : ','3pm : ','4pm : ','5pm : ','6pm : ','7pm : ','8pm : ', 'Total : '],
     
     randomNumber: function() {
-      for(var i =0; i < 14; i++){
+      for(var i =0; i < 15; i++){
         var numberPeople = Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
         var numberCookies = Math.floor(this.aveCookSale * numberPeople);
         this.cookPerHour.push(numberCookies);
@@ -62,7 +66,7 @@ var pioneer = {
     },
 
     getTotal: function(){
-        for(var i =0; i < 14; i++){
+        for(var i =0; i < 15; i++){
             this.totalCookies += this.cookPerHour[i];
         }
     },
@@ -78,11 +82,16 @@ var pioneer = {
         //this.getTotal();
         this.randomNumber();
         var element = document.getElementById('pioneer');
-        for( var i=0; i < 14; i++){
+        for( var i=0; i < 15; i++){
             var list = document.createElement('li');
             list.innerHTML = this.storeHours[i] + this.cookPerHour[i];
             element.appendChild( list); 
         }
+        
+        this.getTotal();
+        var list = document.createElement('li');
+        list.innerHTML = this.storeHours[15] + this.totalCookies;
+        element.appendChild(list);
     }
 }
 pioneer.addToDom();
@@ -97,7 +106,7 @@ var powells = {
     storeHours: ['6am : ','7am : ','8am : ','9am : ','10am : ','11am : ','12pm : ','1pm : ','2pm : ','3pm : ','4pm : ','5pm : ','6pm : ','7pm : ','8pm : ', 'Total : '],
     
     randomNumber: function() {
-      for(var i =0; i < 14; i++){
+      for(var i =0; i < 15; i++){
         var numberPeople = Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
         var numberCookies = Math.floor(this.aveCookSale * numberPeople);
         this.cookPerHour.push(numberCookies);
@@ -105,7 +114,7 @@ var powells = {
     },
 
     getTotal: function(){
-        for(var i =0; i < 14; i++){
+        for(var i =0; i < 15; i++){
             this.totalCookies += this.cookPerHour[i];
         }
     },
@@ -121,11 +130,16 @@ var powells = {
         //this.getTotal();
         this.randomNumber();
         var element = document.getElementById('powells');
-        for( var i=0; i < 14; i++){
+        for( var i=0; i < 15; i++){
             var list = document.createElement('li');
             list.innerHTML = this.storeHours[i] + this.cookPerHour[i];
             element.appendChild( list); 
         }
+        
+        this.getTotal();
+        var list = document.createElement('li');
+        list.innerHTML = this.storeHours[15] + this.totalCookies;
+        element.appendChild(list);        
     }
 }
 powells.addToDom();
@@ -141,7 +155,7 @@ var stjohns = {
     storeHours: ['6am : ','7am : ','8am : ','9am : ','10am : ','11am : ','12pm : ','1pm : ','2pm : ','3pm : ','4pm : ','5pm : ','6pm : ','7pm : ','8pm : ', 'Total : '],
     
     randomNumber: function() {
-      for(var i =0; i < 14; i++){
+      for(var i =0; i < 15; i++){
         var numberPeople = Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
         var numberCookies = Math.floor(this.aveCookSale * numberPeople);
         this.cookPerHour.push(numberCookies);
@@ -149,7 +163,7 @@ var stjohns = {
     },
 
     getTotal: function(){
-        for(var i =0; i < 14; i++){
+        for(var i =0; i < 15; i++){
             this.totalCookies += this.cookPerHour[i];
         }
     },
@@ -165,11 +179,16 @@ var stjohns = {
         //this.getTotal();
         this.randomNumber();
         var element = document.getElementById('stjohns');
-        for( var i=0; i < 14; i++){
+        for( var i=0; i < 15; i++){
             var list = document.createElement('li');
             list.innerHTML = this.storeHours[i] + this.cookPerHour[i];
             element.appendChild( list); 
         }
+        
+        this.getTotal();
+        var list = document.createElement('li');
+        list.innerHTML = this.storeHours[15] + this.totalCookies;
+        element.appendChild(list);        
     }
 }
 stjohns.addToDom();
@@ -185,7 +204,7 @@ var waterfront = {
     storeHours: ['6am : ','7am : ','8am : ','9am : ','10am : ','11am : ','12pm : ','1pm : ','2pm : ','3pm : ','4pm : ','5pm : ','6pm : ','7pm : ','8pm : ', 'Total : '],
     
     randomNumber: function() {
-      for(var i =0; i < 14; i++){
+      for(var i =0; i < 15; i++){
         var numberPeople = Math.floor (Math.random() * (this.maxCust - this.minCust) + this.minCust);
         var numberCookies = Math.floor(this.aveCookSale * numberPeople);
         this.cookPerHour.push(numberCookies);
@@ -193,7 +212,7 @@ var waterfront = {
     },
 
     getTotal: function(){
-        for(var i =0; i < 14; i++){
+        for(var i =0; i < 15; i++){
             this.totalCookies += this.cookPerHour[i];
         }
     },
@@ -209,11 +228,16 @@ var waterfront = {
         //this.getTotal();
         this.randomNumber();
         var element = document.getElementById('waterfront');
-        for( var i=0; i < 14; i++){
+        for( var i=0; i < 15; i++){
             var list = document.createElement('li');
             list.innerHTML = this.storeHours[i] + this.cookPerHour[i];
             element.appendChild( list); 
         }
+        
+        this.getTotal();
+        var list = document.createElement('li');
+        list.innerHTML = this.storeHours[15] + this.totalCookies;
+        element.appendChild(list);        
     }
 }
 waterfront.addToDom();
