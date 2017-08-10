@@ -1,0 +1,40 @@
+body{
+    width: 100%; 
+    background-color: #DE8686;
+    overflow: auto;
+    text-align: center;
+
+
+}
+#headline{
+    color: #282E42;
+    font-family: 'Eczar', serif;
+    text-transform: uppercase;
+}
+#subhead{
+    margin-top: 7%;
+    margin-left: 5.5%;    
+}
+
+#nav{
+    text-align: center;
+    letter-spacing: 0;
+    word-spacing: 1.5em;
+    font-size: 1em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600; 
+    margin: 5% auto;
+}
+
+#nav li{
+    display: inline;
+}
+
+h2{
+    color: #DBDFE6;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+
+
+}

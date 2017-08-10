@@ -49,7 +49,7 @@ Store.prototype.addToTbody = function(){
     var tablerow = document.createElement('tr');
     this.randomNumber();
     
-    var cookiesCell = document.createElement('td');
+    var cookiesCell = document.createElement('th');
     cookiesCell.innerHTML = this.location;
     tablerow.appendChild(cookiesCell);
 
