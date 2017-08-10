@@ -18,7 +18,40 @@
         <tbody>
 
         </tbody>
+        <tfooter>
+          <tr>
+            <th id="clear" colspan="14"></th>
+            <th colspan="2">Total Cookies</td>
+            <th id="grtotal"></td>
+          </tr>
+        </tfooter>
       </table>
+    </div>
+    <div id="content">
+      <p>If you would like to add your store to our report, please fill out the form below.</p>
+    </div>
+    <div id="form">
+      <form id="newLocation" action="demo.html">
+            <fieldset>
+                <legend>New Location</legend>
+
+                <label for="location">What is your store location?</label>
+                <input type="text" name="location" id="location" placeholder="Enter store location"></br>
+                
+                <label for="minCust">What is your minimum number of customers per hour?</label>
+                <input type="number" name="minCust" id="minCust" placeholder="Number of customer"></br>
+
+                <label for="maxCust">What is your maximum number of customers per hour?</label>
+                <input type="number" name="maxCust" id="maxCust" placeholder="Number of customers"></br>
+
+                <label for="aveCookSale">What is your average number of cookies sold per hour?</label>
+                <input type="text" name="aveCookSale" id="aveCookSale" placeholder="Average number of cookies"></br>
+                
+
+                <button type="submit">Add Store</button>
+            </fieldset>
+            
+        </form>
     </div>
 
     <script src="app.js" type="text/javascript"></script>

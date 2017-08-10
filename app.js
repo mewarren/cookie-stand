@@ -2,6 +2,7 @@
 
 var storeHours= ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm', 'Total'];
 
+
 function Store( location, minCust, maxCust, aveCookSale, id ){
     this.location = location;
     this.minCust = minCust;
@@ -58,6 +59,7 @@ Store.prototype.addToTbody = function(){
         cookiesCell.innerHTML = this.cookPerHour[i];
         tablerow.appendChild(cookiesCell); 
     }
+    
     this.getTotal();
     var cookiesCell = document.createElement('td');
     cookiesCell.innerHTML = this.totalCookies;
@@ -79,6 +81,31 @@ powells.addToTbody();
 pioneer.addToTbody();
 stjohns.addToTbody();
 waterfront.addToTbody();
+
+renderTotal();
+
+function calcTotal(){
+    var gTotal = airport.totalCookies + powells.totalCookies + pioneer.totalCookies + stjohns.totalCookies + waterfront.totalCookies;
+    return gTotal;
+};
+
+function renderTotal(){
+    var gt = document.getElementById('grtotal');
+    gt.innerText = calcTotal();
+}
+
+var form = document.getElementById('newLocation');
+form.addEventListener('submit', function(){
+    event.preventDefault();
+    var newStore = new Store(this.location.value, this.minCust.value, this.maxCust.value, this.aveCookSale.value);
+    newStore.addToTbody();
+    
+    var gt = document.getElementById('grtotal');
+    gt.innerText = parseInt(gt.innerText) + newStore.totalCookies;
+        
+});
+
+
 
 
 

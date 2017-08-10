@@ -55,9 +55,12 @@ th{
     text-align: right;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;    
-
 }
 
  th:first-child{
    min-width: 8em; 
 } 
+
+#clear{
+    background-color: #DBDFE6;
+}
