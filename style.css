@@ -35,6 +35,13 @@ h2{
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
+}
 
+/* #content{
+    width 100%;
+} */
 
+#photo{
+    width: 60%;
+    margin: auto;
 }
